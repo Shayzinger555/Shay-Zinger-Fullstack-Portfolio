@@ -13,7 +13,7 @@ export function createGallery() {
     mod1CardsContainer = document.createElement("div"),
     mod2CardsContainer = document.createElement("div");
 
-  // Arrays Declerations
+  // Array Declerations
 
   const modLinksArr = [
       "./landingPages/Landing page 1/HTML/landingPage1.html",
