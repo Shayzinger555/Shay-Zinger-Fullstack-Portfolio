@@ -1,0 +1,159 @@
+.mainNavBar {
+  .navLogo {
+    background-image: url(../Images/Shylogo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+  padding: 0;
+  margin: 0;
+  transition: all 2s ease;
+  width: 90vw;
+  height: 8vh;
+
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 3;
+  top: 0;
+  left: 5vw;
+  @include fullCenter;
+
+  li {
+    @include fullCenter;
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    line-height: 1;
+
+    a {
+      @include fullCenter;
+      text-align: center;
+      width: 40%;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      font-family: $spaceGrotesk;
+      list-style: none;
+      font-size: 2.4em;
+      height: 5vh;
+      display: inline;
+      position: relative;
+      min-width: 100px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $pink2;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        transition: width 0.3s ease-in;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
+// Hamburger
+.hamburgerContainer {
+  position: absolute;
+  right: 5vw;
+  height: 8vh;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.hamburgerIMG {
+  width: 80%;
+  height: 80%;
+  display: none;
+  transition: all 1s ease;
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
+#dropDownContainer {
+  position: fixed;
+  z-index: 9999;
+  height: 92vh;
+  width: 100vw;
+
+  top: 8vh;
+  left: 0;
+
+  #dropDown {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .navBarliH {
+      border: 1px solid #000;
+      background-color: $mainDark;
+      height: 100%;
+      width: 100%;
+      padding-left: 5vw;
+      &:hover {
+        background-color: $pink1;
+      }
+      &:hover a {
+        color: $mainDark;
+      }
+      a {
+        color: $pink1;
+        font-family: $modernArti;
+        text-decoration: none;
+        font-size: 8em;
+      }
+    }
+  }
+}
+
+// media Queries
+@media screen and (max-width: 1070px) {
+  .mainNavBar {
+    left: 0;
+    width: 100vw;
+    background-color: $pink1;
+    .navLogo {
+      display: none;
+    }
+
+    li {
+      display: none;
+    }
+  }
+
+  .hamburgerContainer {
+    position: absolute;
+    right: 5vw;
+    height: 8vh;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: initial;
+  }
+  .hamburgerIMG {
+    width: 80%;
+    height: 80%;
+    display: initial;
+  }
+}
+@media screen and (max-width: 590px) {
+  #dropDownContainer {
+    #dropDown {
+      .navBarliH {
+        a {
+          font-size: 5em;
+        }
+      }
+    }
+  }
+}

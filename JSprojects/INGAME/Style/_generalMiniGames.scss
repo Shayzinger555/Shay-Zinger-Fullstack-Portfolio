@@ -1,0 +1,50 @@
+#overLay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0vh;
+  background: $overLay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #modal {
+    background-color: $bgc1;
+    border: 1px solid #000;
+    height: 90vmin;
+    width: 90vmin;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#resultScreen {
+  font-family: "Press Start 2P";
+  height: 50vmin;
+  font-size: 0.5em;
+  width: 50vmin;
+  position: absolute;
+  margin: 0 auto;
+}
+.miniGamesTop {
+  width: 100%;
+  background-color: $main1;
+  height: 8vh;
+  display: flex;
+  flex-direction: row-reverse;
+  #closeGameBTN {
+    height: 7vh;
+    font-size: 3em;
+    aspect-ratio: 1/1;
+  }
+}
+.miniGamesScreen {
+  margin-top: 3%;
+  border: 10pt solid $main2;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

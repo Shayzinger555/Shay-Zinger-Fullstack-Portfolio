@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shay Zinger - Snake Game With 3 modes</title>
+    <link rel="stylesheet" href="snake.css">
+    <script src="game.js" defer type="module"></script>
+</head>
+
+<body>
+    <div id="instructions"> click on the board to focus window and use ARROWS to move snake!</div>
+    <dialog id="modesDialog">
+        <h1>Shay Zinger - Snake Game</h1>
+        <div id="snakeCardsContainer"></div>
+    </dialog>
+    <dialog id="gameOverContainer" class="invisible">
+        <h1>You lost, try a bit harder</h1>
+        <button id="restartButton">play again</button>
+    </dialog>
+    <div id="board"></div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+#aboutPage {
+  @include sectionPaddings;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  #aboutTop {
+    margin-top: 7vh;
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .aboutP {
+      color: $lightTurq;
+      font-size: 3em;
+      line-height: 1.55;
+      width: 40vw;
+      font-family: $spaceGrotesk;
+      transition: all 2s ease;
+    }
+    img {
+      height: 100%;
+      transition: all 2s ease;
+    }
+  }
+}
+
+// Media Querys
+@media screen and (max-width: 1725px) {
+  #aboutPage {
+    #aboutTop {
+      .aboutP {
+        font-size: 2.5em;
+      }
+      img {
+        height: 80%;
+        transition: all 2s ease;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1578px) {
+  #aboutPage {
+    #aboutTop {
+      .aboutP {
+        font-size: 2.3em;
+      }
+      img {
+        height: 70%;
+        transition: all 2s ease;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1330px) {
+  #aboutPage {
+    #aboutTop {
+      margin-top: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .aboutP {
+        font-size: 2.3em;
+        width: 70vw;
+        text-align: justify;
+      }
+      img {
+        margin-top: 8vh;
+        height: 40vh;
+        aspect-ratio: 1/1 !important;
+        transition: all 2s ease;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1060px) {
+  #aboutPage {
+    #aboutTop {
+      .aboutP {
+        font-size: 2.6em;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  #aboutPage {
+    #aboutTop {
+      .aboutP {
+        font-size: 1.8em;
+        line-height: 2;
+      }
+    }
+  }
+}

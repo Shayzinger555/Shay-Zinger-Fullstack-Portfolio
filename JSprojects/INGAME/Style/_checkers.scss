@@ -1,0 +1,32 @@
+#checkersContainer {
+  background-color: rgb(73, 196, 215);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+.checkersCell {
+  border: 1px solid #000;
+}
+.myOptions {
+  border: 3px solid #ffe100;
+}
+.blackCell {
+  background-color: rgb(110, 110, 110);
+}
+.whitePiece {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 10vh;
+}
+.blackPiece {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  border-radius: 10vh;
+}
+.selectedPiece {
+  border: 5px solid #ffe100;
+}

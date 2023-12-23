@@ -1,0 +1,413 @@
+#galleryPage {
+  height: 100vh;
+  width: 100vw;
+  @include sectionPaddings;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $montserrat;
+  .modContainer {
+    transition: all 1s ease;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: column;
+    background-color: $comfort;
+    height: 70vh;
+    border-radius: 1vh;
+    border-top: none;
+    overflow-y: scroll !important;
+  }
+}
+// Text Container
+.modTextContainer {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding-left: 2.3vw;
+  padding-top: 1.3vw;
+  width: 100%;
+  h2 {
+    font-size: 4em;
+    height: 8vh;
+  }
+  p {
+    font-size: 1.5em;
+    height: 15vh;
+  }
+}
+
+// Card Container
+.modCardsContainer {
+  padding: 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 3rem;
+
+  .galleryCardIMG {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+.galleryCardOL {
+  background-color: rgba(110, 110, 110, 0.288);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Show Preview
+.portBTN1 {
+  background-color: $comfort;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-radius: 50vh;
+  width: 60%;
+  height: 20%;
+}
+
+.galleryCard {
+  border: 1px solid #000;
+  margin-top: 4vh;
+  height: 30vh;
+  max-height: 30vh;
+  overflow-y: hidden;
+
+  .galleryCardIMG {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .galleryCardOL {
+    background-color: rgba(110, 110, 110, 0.288);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// Preview Pages
+#galleryModal {
+  background-color: $comfort;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  #previewTextArea {
+    width: 100%;
+    height: 45vh;
+    #titleAndX {
+      height: 20%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-family: $modernArti;
+        font-size: 4em;
+      }
+      #previewClose {
+        height: 100%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 80%;
+          width: 80%;
+        }
+      }
+    }
+    #previewPcontainer {
+      height: 80%;
+      font-size: 2.5em;
+      font-family: $modernArti;
+    }
+  }
+  #imageAndBTNS {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45vh;
+    width: 100%;
+
+    .previewIMGcontainer {
+      background-repeat: no-repeat;
+      background-size: contain;
+      aspect-ratio: 1/1.5;
+      width: 40vw;
+      height: 45vh;
+    }
+    .portBTN1 {
+      height: 10vh;
+      width: 15vw;
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (max-width: 1850px) {
+  .modTextContainer {
+    h2 {
+      font-size: 2.8em;
+      height: 8vh;
+    }
+    p {
+      font-size: 1.5em;
+      height: 15vh;
+    }
+  }
+
+  #galleryModal {
+    #previewTextArea {
+      width: 100%;
+      height: 45vh;
+      #titleAndX {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          font-family: $modernArti;
+          font-size: 2em;
+        }
+        #previewClose {
+          height: 100%;
+          aspect-ratio: 1/1;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 80%;
+            width: 80%;
+          }
+        }
+      }
+      #previewPcontainer {
+        height: 80%;
+        font-size: 2em;
+        font-family: $modernArti;
+      }
+    }
+    #imageAndBTNS {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 45vh;
+      width: 100%;
+
+      .previewIMGcontainer {
+        background-repeat: no-repeat;
+        background-size: contain;
+        aspect-ratio: 1/1.5;
+        width: 40vw;
+        height: 45vh;
+      }
+      .portBTN1 {
+        height: 10vh;
+        width: 15vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #galleryModal {
+    #previewTextArea {
+      width: 100%;
+      height: 45vh;
+      #titleAndX {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          font-family: $modernArti;
+          font-size: 2em;
+        }
+        #previewClose {
+          height: 100%;
+          aspect-ratio: 1/1;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 80%;
+            width: 80%;
+          }
+        }
+      }
+      #previewPcontainer {
+        height: 80%;
+        font-size: 1.3em;
+        font-family: $modernArti;
+      }
+    }
+    #imageAndBTNS {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 45vh;
+      width: 100%;
+
+      .previewIMGcontainer {
+        background-repeat: no-repeat;
+        background-size: contain;
+        aspect-ratio: 1/1.5;
+        width: 40vw;
+        height: 45vh;
+      }
+      .portBTN1 {
+        height: 10vh;
+        width: 45vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .modTextContainer {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-left: 2.3vw;
+    padding-top: 1.3vw;
+    width: 100%;
+    h2 {
+      font-size: 2em;
+      height: 8vh;
+    }
+    p {
+      font-size: 1.2em;
+      height: 15vh;
+    }
+  }
+  .modCardsContainer {
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  #galleryPage {
+    height: 100vh;
+    width: 100vw;
+    @include sectionPaddings;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .modContainer {
+      transition: all 4s ease;
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+      background-color: $comfort;
+      height: 40vh;
+      border-radius: 1vh;
+      border-top: none;
+      overflow-y: scroll !important;
+    }
+  }
+
+  .modTextContainer {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-left: 2.3vw;
+    padding-top: 1.3vw;
+    width: 100%;
+    h2 {
+      font-size: 2em;
+      height: 8vh;
+    }
+    p {
+      font-size: 1.2em;
+      height: 15vh;
+    }
+  }
+  .modCardsContainer {
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #galleryModal {
+    #previewTextArea {
+      width: 100%;
+      height: 45vh;
+      #titleAndX {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          font-family: $modernArti;
+          font-size: 2em;
+        }
+        #previewClose {
+          height: 100%;
+          aspect-ratio: 1/1;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 80%;
+            width: 80%;
+          }
+        }
+      }
+      #previewPcontainer {
+        height: 80%;
+        font-size: 1em;
+        font-family: $modernArti;
+      }
+    }
+    #imageAndBTNS {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 45vh;
+      width: 100%;
+
+      .previewIMGcontainer {
+        background-repeat: no-repeat;
+        background-size: contain;
+        aspect-ratio: 1/1.5;
+        width: 40vw;
+        height: 45vh;
+      }
+      .portBTN1 {
+        height: 10vh;
+        width: 45vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+#tttContainer {
+  height: 60vmin;
+  aspect-ratio: 1/1;
+
+  tr {
+    height: 20vmin;
+    width: 60vmin;
+    td {
+      height: 10vmin !important;
+      width: 10vmin;
+      border: 1px solid #ffffff;
+      font-size: 3em;
+      color: $main1;
+      text-align: center;
+    }
+  }
+}
+#td1TTT {
+  border-left: none !important;
+  border-top: none !important;
+}
+#td2TTT {
+  border-top: none !important;
+}
+
+#td3TTT {
+  border-right: none !important;
+  border-top: none !important;
+}
+#td4TTT {
+  border-left: none !important;
+}
+#td6TTT {
+  border-right: none !important;
+}
+#td7TTT {
+  border-left: none !important;
+  border-bottom: none !important;
+}
+#td8TTT {
+  border-bottom: none !important;
+}
+#td9TTT {
+  border-right: none !important;
+  border-bottom: none !important;
+}

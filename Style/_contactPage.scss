@@ -1,0 +1,199 @@
+#contactPage {
+  @include sectionPaddings;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: $spaceGrotesk;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+
+  #contactMiddleContainer {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    #socialsContainer {
+      height: 80vh;
+      width: 40vw;
+      #socialsContentContainer {
+        height: 60vh;
+        width: 40vw;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        .social {
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          .socialIMG {
+            width: 100%;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            animation: tiltIcon 6s alternate infinite;
+            &:hover {
+              scale: 1.2;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+
+    @keyframes tiltIcon {
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+      25%,
+      75% {
+        transform: rotate(-15deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+    }
+    #formContainer {
+      height: 80vh;
+      width: 40vw;
+      #formContentContainer {
+        margin-top: 3vh;
+        height: 60vh;
+        width: 40vw;
+        #contactForm {
+          height: 57vh;
+          width: 40vw;
+          display: grid;
+          font-size: 0.8em;
+          grid-template-rows: repeat(11, 1fr);
+          grid-template-columns: repeat(5, 1fr);
+          overflow: hidden;
+          :nth-child(1) {
+            border-radius: 2vh;
+            overflow: hidden;
+            grid-area: 1/1/2/3;
+          }
+          :nth-child(2) {
+            border-radius: 2vh;
+
+            overflow: hidden;
+            grid-area: 3/1/4/3;
+          }
+          :nth-child(3) {
+            border-radius: 2vh;
+
+            overflow: hidden;
+            grid-area: 1/4/2/6;
+          }
+          :nth-child(4) {
+            border-radius: 2vh;
+
+            overflow: hidden;
+            grid-area: 3/4/4/6;
+          }
+          :nth-child(5) {
+            border-radius: 2vh;
+            overflow: hidden;
+            grid-area: 6/1/9/6;
+          }
+          :nth-child(6) {
+            border-radius: 2vh;
+            overflow: hidden;
+            grid-area: 10/1/12/6;
+          }
+        }
+      }
+    }
+  }
+}
+// classes
+.contactTitle {
+  width: 40vw;
+  color: $comfort;
+
+  height: 10vh;
+  font-size: 3em;
+}
+.contactInput {
+  border-radius: 50vh;
+  font-size: 2em;
+}
+.portBTN1 {
+  width: 100%;
+  height: 8vh;
+  font-size: 1.5em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// media queries
+@media screen and (max-width: 1300px) {
+  #contactPage {
+    #contactMiddleContainer {
+      height: 90vh;
+      width: 90vw;
+      flex-direction: column;
+      #socialsContainer {
+        height: 40vh;
+        width: 90vw;
+        #socialsContentContainer {
+          height: 30vh;
+          width: 90vw;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
+          .social {
+            .socialIMG {
+              width: 25%;
+              min-width: 60px;
+              aspect-ratio: 1/1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      #formContainer {
+        height: 50vh;
+        #formContentContainer {
+          #contactForm {
+            height: 35vh;
+            width: 90vw;
+            display: grid;
+            font-size: 1em;
+            grid-template-rows: repeat(11, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  // classes
+  .contactTitle {
+    width: 90vw;
+    color: $comfort;
+    height: 10vh;
+    font-size: 2.4em;
+
+    &:nth-child(2) {
+      font-size: 1em !important;
+    }
+  }
+  .contactInput {
+    height: 5vh;
+    border-radius: 50vh;
+    font-size: 1.5em;
+  }
+  .portBTN1 {
+    width: 100%;
+    height: 5vh;
+    font-size: 1.5em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

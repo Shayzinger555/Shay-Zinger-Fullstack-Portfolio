@@ -1,0 +1,63 @@
+.invisible {
+  display: none !important;
+}
+.tooTop {
+  transform: translateY(-100vh) !important;
+}
+.tooRight {
+  transform: translateX(100vw) !important;
+}
+.tooLeft {
+  transform: translateX(-100vw) !important;
+}
+.bdn {
+  border: none !important;
+}
+.overFlowHidden {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.currentSectionLI {
+  a {
+  
+    &::before {
+      width: 100% !important;
+    }
+  }
+}
+
+.typeANM1 {
+  animation: typing 1.2s steps(20), cursor 0.4s step-end infinite alternate;
+}
+.typeANM2 {
+  animation: typing 1.5s steps(20), cursor 0.4s step-end infinite alternate;
+}
+.typeANM3 {
+  animation: typing 2.5s steps(30), cursor 0.4s step-end infinite alternate;
+}
+
+.homeBody {
+  background-color: $lightpurple1;
+  transition: all 1s ease;
+}
+.aboutBody {
+  background-color: $mainDark;
+  transition: all 1s ease;
+}
+.galleryBody {
+  background-color: $pink1;
+  transition: all 1s ease;
+}
+.contactBody {
+  background-color: $greyBlue;
+  transition: all 1s ease;
+}
+.bottomBlur {
+  opacity: 0.01;
+  transform: translateY(8vh);
+}
+// Cursor
+.lightCursor {
+  box-shadow: 0 0 10px $lightTurq;
+  animation: lightCursor 1s infinite alternate;
+}

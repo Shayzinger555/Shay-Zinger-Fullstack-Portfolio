@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  &:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  &::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  width: 100vw;
+  background-color: $lightpurple1;
+  overflow-x: hidden;
+  // cursor: url(../Icons/Cursor1.svg), auto;
+}
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  animation: cursorAnim 2.5s infinite alternate;
+}
+.expand {
+  animation: cursorClick 0.5s forwards;
+  border: 1px solid $lightTurq;
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes cursorClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.portBTN1 {
+  text-decoration: none;
+  border-radius: 11vh;
+  overflow: hidden;
+  position: relative;
+  font-size: 1em;
+  font-family: $modernArti;
+  cursor: pointer;
+  z-index: 1;
+  &::before {
+    content: "";
+    border-radius: 1vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $pink1;
+    transition: transform 350ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+#creditsLine {
+  position: fixed;
+  bottom: 0;
+  height: 4vh;
+  width: 100vw;
+  background-color: $comfort;
+  opacity: 0.7;
+  align-items: center;
+  gap: 2vw;
+  display: flex;
+  font-family: $modernArti;
+  color: $lightpurple1;
+  img {
+    height: 3vh;
+  }
+}

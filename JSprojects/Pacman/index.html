@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man Shay Zinger</title>
+    <style>
+        #gameCanvas {
+            box-shadow: 10px 10px 20px black;
+            width: 80vmin;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: comic sans MS;
+            color: lightgrey;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 100vh;
+            background: rgb(79, 79, 79)
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Pac-Man</h1>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="src/Game.js" type="module"></script>
+</body>
+
+</html>

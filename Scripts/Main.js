@@ -1,0 +1,12 @@
+import "./dom.js";
+import "./scrollAnimations.js";
+import * as loadingScreen from "./loadingScreen.js";
+import allScrollANM from "./scrollAnimations.js";
+import { createGallery } from "./gallery.js";
+import { createContacts } from "./contact.js";
+import { createCursor } from "./cursor.js";
+loadingScreen.loadingScreenFunc();
+allScrollANM();
+createGallery();
+createCursor();
+createContacts();

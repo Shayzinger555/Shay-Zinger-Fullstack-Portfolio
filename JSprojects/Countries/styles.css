@@ -1,0 +1,72 @@
+.img {
+  height: 35%;
+}
+.fa {
+  cursor: pointer;
+}
+.countriesVid {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  min-width: 100%;
+}
+#filterIcon {
+  height: 5vh;
+  margin-left: 2vw;
+}
+#filterIcon:hover {
+  cursor: pointer;
+}
+#filterPopUp {
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  height: 23vw;
+  width: 49vw;
+  right: 0 !important;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow: hidden;
+}
+.filterOption:hover {
+  cursor: pointer;
+  background-color: rgba(149, 149, 246, 0.715);
+}
+input {
+  max-width: 25vw;
+  margin-left: 5vw;
+}
+.filterOption {
+  font-size: 3.5em;
+}
+@media screen and (max-width: 1600px) {
+  input {
+    max-width: 51vw;
+    width: 50vw;
+  }
+  .filterOption {
+    font-size: 1.5em;
+    font-family: "Merriweather";
+  }
+}
+@media screen and (max-width: 1055px) {
+  .filterOption {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .filterOption {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 863px) {
+  .filterOption {
+    font-size: 0.6em;
+  }
+}

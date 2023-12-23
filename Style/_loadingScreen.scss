@@ -1,0 +1,82 @@
+.loadingScreen {
+  position: fixed;
+  @include fullCenter;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $mainDark;
+  border: none;
+  z-index: 9998;
+  margin: auto;
+}
+.neonBox1Parent {
+  position: absolute;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  @include fullCenter;
+}
+
+.neonBox1 {
+  margin: 0;
+  background-color: black;
+  height: 10vh;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  @include fullCenter;
+  overflow: hidden;
+  span {
+    width: 95%;
+    height: 95%;
+    inset: 5px;
+    background-image: url(../Images/Shylogo.jpeg);
+    background-size: 100%;
+    z-index: 9997;
+    background-repeat: no-repeat;
+  }
+  &::after {
+    content: "";
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      #d400d4
+    );
+
+    animation: animate 2s linear infinite;
+    animation-delay: 0.1s;
+  }
+  &::before {
+    content: "";
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    box-shadow: 0 0 10px $lightTurq;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      // $accent1
+    );
+
+    animation: animate 1s linear infinite;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

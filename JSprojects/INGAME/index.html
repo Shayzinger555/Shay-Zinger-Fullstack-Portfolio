@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INGAME</title>
+    <link rel="stylesheet" href="./Style/main.css" />
+    <script
+      src="./Scripts/Checkers/checkersMain.js"
+      type="module"
+      defer
+    ></script>
+    <script src="./Scripts/FC.js" defer></script>
+    <script src="./Scripts/RPS.js" defer></script>
+    <script src="./Scripts/TTT.js" defer></script>
+    <script src="./Scripts/home.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="topScreen">
+      <div id="titleContainer">
+        <h1>InGame</h1>
+        <h1>InGame</h1>
+      </div>
+      <h2 id="scoreDisplay">Score: 0s</h2>
+    </div>
+
+    <!-- You Won Screen -->
+    <dialog id="resultScreen">
+      <h1 id="resultMSG"></h1>
+      <button class="resultButton" id="resultBTN">OK</button>
+    </dialog>
+
+    <div id="overLay" class="invisible">
+      <dialog id="modal">
+        <div class="miniGamesTop">
+          <button id="closeGameBTN">X</button>
+        </div>
+        <div class="miniGamesScreen" id="miniGamesScreen"></div>
+      </dialog>
+    </div>
+    <div id="cardsContainer"></div>
+    
+  </body>
+</html>

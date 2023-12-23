@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  background-image: linear-gradient(
+    to right bottom,
+    #f307c4,
+    #6160f0,
+    #e946c8,
+    #373766,
+    #f307c4,
+    rgb(96, 240, 170)
+  );
+  background-size: 1000% 2000%;
+  animation: gradientAnimation 4s linear infinite;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  .topScreen {
+    width: 90vw;
+    height: 20vh;
+    background-color: gray;
+    margin-top: 5vh;
+    border-radius: 4vh;
+    border: 1px solid #d2adad;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem;
+
+    h2 {
+      font-size: 3em;
+    }
+  }
+}
+// Title Animations
+#titleContainer {
+  filter: blur(0.4px);
+  position: relative;
+
+  h1 {
+    font-family: "Press Start 2P";
+    position: absolute;
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+    &:first-child {
+      color: transparent;
+      -webkit-text-stroke: 2px $main1;
+      text-shadow: 3px 3px 3px $main2;
+    }
+    &:nth-child(2) {
+      color: $main1;
+      animation: animate 0.0003s ease-in-out infinite;
+    }
+  }
+}
+@keyframes animate {
+  0%,
+  16% {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  33%,
+  50% {
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  }
+
+  66%,
+  83% {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  }
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 10vh;
+  width: 80vw;
+  margin-left: 10vw;
+}
+.hiddenCard {
+  position: absolute;
+  height: 35vh;
+  width: 15vw;
+  background-color: $bgc1;
+  border-radius: 2vh;
+  display: flex;
+  text-align: center;
+  transform: translateY(-3vh);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.card {
+  margin-top: 5vh;
+  padding-top: 3vh;
+  height: 35vh;
+  width: 15vw;
+  background-color: $bgc1;
+  border-radius: 2vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Press Start 2P";
+  font-size: 1em;
+  align-items: center;
+  text-align: center;
+  button {
+    margin-top: 10vh;
+    width: 70%;
+    height: 6vh;
+    font-family: "Press Start 2P";
+    font-size: 0.65em;
+    border-radius: 4vh;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  #cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: 22.5vw;
+  }
+
+  #titleContainer {
+    h1 {
+      font-size: 3.5em;
+    }
+
+    .topScreen {
+      h2 {
+        font-size: 3.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: 22.5vw;
+  }
+
+  #titleContainer {
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .topScreen {
+      h2 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+.card {
+  margin-top: 5vh;
+  padding-top: 3vh;
+  height: 35vh;
+  width: 15vw;
+  background-color: $bgc1;
+  border-radius: 2vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Press Start 2P";
+  font-size: 0.75em;
+  align-items: center;
+  text-align: center;
+  button {
+    margin-top: 10vh;
+    width: 70%;
+    height: 6vh;
+    font-family: "Press Start 2P";
+    font-size: 0.65em;
+    border-radius: 4vh;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    margin-top: 10vh;
+    width: 35vw;
+    margin-left: 5vw;
+  }
+
+  #titleContainer {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+  body {
+    .topScreen {
+      width: 90vw;
+      height: 40vh;
+      margin-top: 5vh;
+      border-radius: 4vh;
+      border: 1px solid #d2adad;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem;
+      h2 {
+        font-size: 2.5em;
+      }
+    }
+  }
+  .hiddenCard {
+    position: absolute;
+    height: 35vh;
+    width: 30vw;
+    background-color: $bgc1;
+    border-radius: 2vh;
+    display: flex;
+    text-align: center;
+    transform: translateY(-3vh);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .card {
+    margin-top: 5vh;
+    padding-top: 3vh;
+    height: 35vh;
+    width: 30vw;
+    background-color: $bgc1;
+    border-radius: 2vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Press Start 2P";
+    font-size: 0.75em;
+    align-items: center;
+    text-align: center;
+    button {
+      margin-top: 10vh;
+      width: 70%;
+      height: 6vh;
+      font-family: "Press Start 2P";
+      font-size: 0.65em;
+      border-radius: 4vh;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

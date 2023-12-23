@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --main-color: rgb(100, 255, 218);
+  --bgc-color: rgb(10, 25, 47);
+  --secondary-color: #d400d4;
+  --myCyan: rgb(0, 247, 255);
+}
+
+body {
+  background-color: var(--main-color);
+  padding-left: 4vw;
+  overflow-x: hidden;
+}
+.title {
+  height: 15vh;
+  width: 85vw;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.informationTitles {
+  height: 8vh;
+  display: flex;
+  align-items: end;
+  width: 100vw;
+  justify-content: start;
+  background-color: var(--main-color);
+  margin-top: 4vh;
+}
+h3 {
+  display: flex;
+  width: 40vw;
+  text-shadow: 0.05vw 1.8vh 0.02px rgba(0, 0, 0, 0.044);
+  font-size: 3em;
+  letter-spacing: 2vw;
+}
+
+.h32 {
+  margin-left: 6vw;
+}
+
+.title h1 {
+  font-size: 5em;
+}
+.title h2 {
+  text-align: start;
+  font-size: 2em;
+}
+
+/* List */
+.information {
+  background-color: var(--main-color);
+  height: 69vh;
+  gap: 1vw;
+  width: 90vw;
+  display: flex;
+}
+
+.work,
+.education {
+  background-color: var(--bgc-color);
+  height: 69vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+.infoBox {
+  height: 20vh;
+  width: 45vw;
+}
+.info,
+.date {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  height: 10vh;
+  font-size: 3.25em;
+  color: #d400d4;
+}
+.info {
+  height: 10vh;
+  color: rgb(106, 210, 255);
+  padding-left: 50%;
+}
+
+@media screen and (max-width: 1500px) {
+  .info,
+  .date {
+    padding: 0;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .date {
+    font-size: 3em;
+  }
+  .info {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .info {
+    font-size: 1.5em;
+  }
+  .title {
+    padding-right: 4vw;
+    margin: 0;
+    height: 15vh;
+    width: 92vw;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title h1 {
+    font-size: 4em;
+  }
+  h3 {
+    width: 45vw;
+    text-align: center;
+    font-size: 2em;
+  }
+  .h32 {
+    margin-left: 1vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title h1 {
+    font-size: 3.2em;
+  }
+  .info,
+  .date {
+    padding: 0;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+  }
+  .date {
+    font-size: 2em;
+  }
+  .info {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
