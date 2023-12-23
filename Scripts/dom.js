@@ -115,14 +115,14 @@ export const createHomePage = () => {
   const resumeLinkBTN = document.createElement("a");
   resumeLinkBTN.classList.add("portBTN1");
   resumeLinkBTN.textContent = "Watch Resume";
-  resumeLinkBTN.href = "../resume/resume.html";
+  resumeLinkBTN.href = "./resume/resume.html";
 
   const resumeLinkBTN2 = document.createElement("a");
   resumeLinkBTN2.classList.add("portBTN1");
   resumeLinkBTN2.id = "resumeLinkBTN2";
   resumeLinkBTN2.classList.add("tooLeft");
   resumeLinkBTN2.textContent = "Resume";
-  resumeLinkBTN2.href = "../resume/resume.html";
+  resumeLinkBTN2.href = "./resume/resume.html";
 
   const homeIMGcontainer = document.createElement("div");
   homeIMGcontainer.classList.add("homeIMGcontainer");
