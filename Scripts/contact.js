@@ -40,12 +40,12 @@ export function createContacts() {
 
   //
   const socialsIcons = [
-    "../Icons/instagram.svg",
-    "../Icons/gmail.svg",
-    "../Icons/whatsapp.svg",
-    "../Icons/spotify.svg",
-    "../Icons/tiktok.svg",
-    "../Icons/github.svg",
+    "./Icons/instagram.svg",
+    "./Icons/gmail.svg",
+    "./Icons/whatsapp.svg",
+    "./Icons/spotify.svg",
+    "./Icons/tiktok.svg",
+    "./Icons/github.svg",
   ];
   const socialsLinks = [
     "https://www.instagram.com/itshyzinger/",
