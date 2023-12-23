@@ -169,7 +169,7 @@ export function createAboutPage() {
   aboutBottom.id = "#aboutBottom";
   const aboutP = document.createElement("p");
   const aboutIMG = document.createElement("img");
-  aboutIMG.src = "../Images/dkalimPhoto.jpeg";
+  aboutIMG.src = "./Images/dkalimPhoto.jpeg";
   aboutIMG.classList.add("aboutIMG");
   aboutIMG.classList.add("tooLeft");
 
