@@ -86,7 +86,7 @@ export function createGallery() {
     previewClose = document.createElement("div");
   previewClose.id = "previewClose";
   const previewCloseIcon = document.createElement("img");
-  previewCloseIcon.src = "../Icons/X.svg";
+  previewCloseIcon.src = "./Icons/X.svg";
   previewClose.appendChild(previewCloseIcon);
 
   previewClose.addEventListener("click", () => {
