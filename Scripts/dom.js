@@ -20,7 +20,7 @@ export const createNavBar = () => {
 
   hamburgerContainer.appendChild(hamburgerIMG);
   mainNavBar.appendChild(hamburgerContainer);
-  hamburgerIMG.src = "../Icons/hamburger.svg";
+  hamburgerIMG.src = "./Icons/hamburger.svg";
   // LIs
   for (let i = 0; i < menuItems.length; i++) {
     let li = document.createElement("li");
