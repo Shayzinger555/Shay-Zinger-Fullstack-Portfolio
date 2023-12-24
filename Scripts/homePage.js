@@ -7,7 +7,7 @@ export const homePageAnimations = () => {
     homeText4 = document.querySelector("#homeText4"),
     techStackContainer = document.querySelector("#techStackContainer"),
     homeIMGcontainer = document.querySelector(".homeIMGcontainer"),
-    resumeLinkBTN2 = document.querySelector("#resumeLinkBTN2");
+    resumeLinkBTN2 = document.querySelector("#resumeLinkBTN2"),
   firstMT = document.querySelector("#firstMT");
 
   const secMT = document.querySelector("#secMT");
